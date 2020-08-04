@@ -1,9 +1,8 @@
 pipeline {
     agent {
         docker {
-            image 'maven' 
+            image 'maven:3.5.2-jdk-8' 
             args '-v //c/Users/huituo/.m2:/root/.m2' 
-            sh 'which java'
         }
     }
     stages {
