@@ -10,7 +10,7 @@ pipeline {
             // 再把变量加入到环境变量中
             //env.PATH = "${jdk88}/bin:${mvnHome}/bin:${env.PATH}"
             //sh "mvn -B verify"
-            sh "echo '$PATH'"
+            //sh "echo '$PATH'"
             sh "which java"
             //sh "echo ${JOB_NAME}"
             //sh "echo ${env.JOB_NAME}"
