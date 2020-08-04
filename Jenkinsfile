@@ -5,10 +5,6 @@ pipeline {
             args '-v /root/.m2:/root/.m2' 
         }
     }
-    node {
-    sh "java -version"
-    sh "which java"
-    }
     stages {
         stage('Build') { 
             steps {
