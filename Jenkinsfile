@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'maven' 
-            args '-v c:\users\huituo\.m2:/root/.m2' 
+            args '-v /root/.m2:/root/.m2' 
         }
     }
     node {
@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'mvn -B -DskipTests -s /var/jenkins_home/settings.xml clean package' 
+                sh 'mvn -B -DskipTests clean package' 
             }
         }
     }
