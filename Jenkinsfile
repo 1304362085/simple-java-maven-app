@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'maven' 
-            args '-v /root/.m2:/root/.m2 -v /var/jenkins_home/settings.xml:/var/jenkins_home/settings.xml' 
+            args '-v C:\Users\huituo\.m2:/root/.m2' 
         }
     }
     node {
