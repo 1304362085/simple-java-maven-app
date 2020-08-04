@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'maven' 
-            args '-v /root/.m2:/root/.m2 -v /var/jenkins_home/settings.xml:/root/.m2/settings.xml' 
+            args '-v /root/.m2:/root/.m2 -v /var/jenkins_home/settings.xml:/var/jenkins_home/settings.xml' 
         }
     }
     node {
@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'mvn -B -DskipTests clean package' 
+                sh 'mvn -B -DskipTests -s /var/jenkins_home/settings.xml clean package' 
             }
         }
     }
