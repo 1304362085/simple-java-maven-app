@@ -10,7 +10,7 @@ pipeline {
             agent{
                // def mvnHome = tool 'M3.2.3'
                 // 这里就是引入我们在全局配置中配置的jdk；写法：tool 名称
-                def jdk88 = tool 'jjdk'
+                def jdk88 = tool 'JJDK'
                 // 再把变量加入到环境变量中
                 env.PATH = "${jdk88}/bin:${mvnHome}/bin:${env.PATH}"
                 sh "mvn -B verify"
