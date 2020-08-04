@@ -4,7 +4,7 @@ pipeline {
             image 'maven' 
             args '-v //c/Users/huituo/.m2:/root/.m2' 
 
-            // def mvnHome = tool 'M3.2.3'
+            def mvnHome = tool 'MyMaven'
             // 这里就是引入我们在全局配置中配置的jdk；写法：tool 名称
             def jdk88 = tool 'JJDK'
             // 再把变量加入到环境变量中
